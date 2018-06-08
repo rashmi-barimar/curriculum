@@ -5,8 +5,14 @@
  * @returns {number}
  */
 
-const solution = (a) => {
-  return 0;
+const solution = (a, sum=0 ) => {
+  let i;
+  for (i=2; i<a; i++) {
+       if ( a % i === 0 ) {
+       sum = sum + i;
+       }
+  }
+  return sum;
 };
 
 module.exports = {
