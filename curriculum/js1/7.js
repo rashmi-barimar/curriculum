@@ -6,7 +6,22 @@
  */
 
 const solution = (a) => {
-  return 0;
+  let flag = 1;
+  let i;
+  if ( a === 1 ) {
+    return false;
+  }
+  for ( i=2; i<a; i++) {
+    if ( a % i === 0) {
+      flag = 0;
+      break;
+    }
+  }
+  if ( flag === 1) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 module.exports = {
