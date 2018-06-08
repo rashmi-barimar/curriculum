@@ -5,7 +5,13 @@
  */
 
 const solution = (a) => {
-  return 0;
+  let rem;
+  let nextNumDivBy7;
+  let noToMakeDivBy7;
+  rem = a % 7;
+  noToMakeDivBy7 = 7 - rem;
+  nextNumDivBy7 = a + noToMakeDivBy7;
+  return nextNumDivBy7;
 };
 
 module.exports = {
