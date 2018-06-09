@@ -6,21 +6,21 @@
  */
 
 const solution = (a) => {
-  let flag = 1;
+  let flag = true;
   let i;
   if ( a === 1 ) {
     return false;
   }
-  for ( i=2; i<a; i++) {
+  for ( i=2; i<=a/2; i++) {
     if ( a % i === 0) {
-      flag = 0;
+      flag = false;
       break;
     }
   }
-  if ( flag === 1) {
-    return true;
+  if ( flag ) {
+    return flag;
   } else {
-    return false;
+    return flag;
   }
 };
 
