@@ -5,15 +5,25 @@
  * @returns {number}
  */
 
-const solution = (a, sum=0 ) => {
+const solution = (a, sum=0, counter=2 ) => {
   let i;
-  for (i=2; i<a; i++) {
+  for (i=2; i<=a/2; i++) {
        if ( a % i === 0 ) {
-       sum = sum + i;
+           sum = sum + i;
        }
   }
   return sum;
 };
+
+/* const solutionRec = (a, sum=0, counter=2 ) => {
+if ( a % counter === 0 ) {
+  sum = sum + counter;
+}
+if ( counter >= a/2 ) {
+ return sum;
+}
+return solutionRec(a, sum, counter+1 );
+};*/
 
 module.exports = {
   solution,
