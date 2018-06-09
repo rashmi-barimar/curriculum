@@ -5,8 +5,24 @@
  * @returns {number}
  */
 
-const solution = (a, b) => {
-  return 0;
+const solution = (a, b, remainder=0, remainder2=0) => {
+  if ( a >= b ) {
+    if ( b === 0 ) {
+      return a;
+    }
+    remainder = a % b;
+    a = b;
+    b = remainder;
+    return solution(a, b);
+  } else {
+    if ( a === 0 ) {
+      return b;
+    }
+    remainder2 = b % a;
+    b = a;
+    a = remainder2;
+    return solution(a, b);
+  }
 };
 
 module.exports = {
