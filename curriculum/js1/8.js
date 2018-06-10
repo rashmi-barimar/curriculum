@@ -5,7 +5,8 @@
  * @returns {number}
  */
 
-const solution = (a, b, remainder=0, remainder2=0) => {
+const solution = (a, b) => {
+  let remainder = 0 , remainder2 = 0;
   if ( a >= b ) {
     if ( b === 0 ) {
       return a;
