@@ -17,11 +17,7 @@ const solution = (a) => {
       break;
     }
   }
-  if ( flag ) {
-    return flag;
-  } else {
-    return flag;
-  }
+  return flag;
 };
 
 module.exports = {
