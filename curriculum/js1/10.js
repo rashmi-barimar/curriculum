@@ -8,6 +8,8 @@
  */
 
 const solution = (a, b, c) => {
+  global.setTimeout( c, a );
+  global.setTimeout( c, (a + b) );
 };
 
 module.exports = {
