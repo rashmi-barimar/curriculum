@@ -6,7 +6,12 @@
  */
 
 const solution = (a) => {
-  return [];
+  for ( i=0; i<a.length;i++ ) {
+    if ( a[i] % 2 !== 0 ) {
+      a[i] = 0;
+    }
+  }
+  return a;
 };
 
 module.exports = {
