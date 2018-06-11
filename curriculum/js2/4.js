@@ -5,7 +5,12 @@
  */
 
 const solution = (a) => {
-  return 0;
+  let i;
+  let sum=0;
+  for ( i = 0; i < a.length; i ++ ) {
+    sum = sum + a[i];
+  }
+  return sum;
 };
 
 module.exports = {
