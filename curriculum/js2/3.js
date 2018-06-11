@@ -7,7 +7,23 @@
  */
 
 const solution = (a) => {
-  return [];
+  for ( i = 0; i< a.length; i ++ ) {
+    if ( ! primeNoFunc(a[i]) ) {
+      a[i] = 1;
+    }
+  }
+  return a;
+};
+const primeNoFunc = (num) => {
+  let flag = true;
+  let i;
+  for ( i = 2; i <= num/2; i++ ) {
+    if ( num % i === 0 ) {
+      flag = false;
+      break;
+    }
+  }
+  return flag;
 };
 
 module.exports = {
