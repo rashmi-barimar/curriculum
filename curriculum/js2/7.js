@@ -7,7 +7,13 @@
  */
 
 const solution = (a, b) => {
-  return 0;
+  let counter = 0;
+  for ( let i = 0; i < a.length; i ++ ) {
+    if ( a[i] === b ) {
+      counter += 1;
+    }
+  }
+  return counter;
 };
 
 module.exports = {
