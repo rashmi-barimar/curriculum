@@ -5,7 +5,15 @@
  */
 
 const solution = (a) => {
-  return [];
+  let b = [];
+  let j = 0;
+  for ( let i = 0; i < a.length; i ++ ) {
+    if ( a[i] > 5 ) {
+      b[j] = a[i];
+      j += 1;
+    }
+  }
+  return b;
 };
 
 module.exports = {
