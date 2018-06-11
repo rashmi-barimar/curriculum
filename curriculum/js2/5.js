@@ -5,7 +5,13 @@
  */
 
 const solution = (a) => {
-  return 0;
+  let largest = a[0];
+  for ( let i = 1; i < a.length; i ++ ) {
+    if ( a[i] > largest ) {
+      largest = a[i];
+    }
+  }
+  return largest;
 };
 
 module.exports = {
