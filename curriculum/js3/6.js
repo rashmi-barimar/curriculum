@@ -10,17 +10,17 @@
 */
 
 const solution = (a, b)=>{
-  let key = Object.keys(a);
-  let value = Object.values(a);
-  let flag = false;
-  let newObj = {};
-  for ( let i = 0; i < key.length; i ++ ) {
-    flag = b(key[i], value[i]);
-    if ( flag ) {
-      newObj[key[i]] = value[i];
-    }
+  let kVArr = Object.entries(a);
+  return callFuncb(kVArr, b);
+};
+const callFuncb = (kVArr, b, newObj = {}, i = 0) => {
+  if ( i === kVArr.length ) {
+    return newObj;
   }
-  return newObj;
+  if (b(kVArr[i][0], kVArr[i][1])) {
+    newObj[kVArr[i][0]] = kVArr[i][1];
+  }
+  return callFuncb(kVArr, b, newObj, i + 1);
 };
 
 module.exports = {
