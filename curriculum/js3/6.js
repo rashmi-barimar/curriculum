@@ -10,7 +10,17 @@
 */
 
 const solution = (a, b)=>{
-  return c;
+  let key = Object.keys(a);
+  let value = Object.values(a);
+  let flag = false;
+  let newObj = {};
+  for ( let i = 0; i < key.length; i ++ ) {
+    flag = b(key[i], value[i]);
+    if ( flag ) {
+      newObj[key[i]] = value[i];
+    }
+  }
+  return newObj;
 };
 
 module.exports = {
