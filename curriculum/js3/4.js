@@ -7,9 +7,21 @@
  */
 
 const solution = (a, b)=>{
-  return true;
+  let flag1;
+  flag1 = checkPairs(a, b, false);
+  return flag1;
 };
-
+const checkPairs = (a, b, flag, obj = {}, i = 0) => {
+  if ( i === a.length ) {
+    return flag;
+  }
+  if ( obj[b-a[i]] ) {
+    return true;
+  } else {
+    obj[a[i]] = true;
+  }
+  return checkPairs(a, b, flag, obj, i + 1 );
+};
 module.exports = {
   solution,
 };
