@@ -8,9 +8,17 @@
 // You can use helper functions like:
 //     Object.keys, Object.values, or Object.entries
 const solution = () => {
-  Object.prototype.gsForEach = function () {
-    // To get the actual object, use this
+  Object.prototype.gsForEach = function (cb) {
+    let kVArr = Object.entries(this);
+    forEachRec(cb, kVArr);
+    };
   };
+const forEachRec = (cb, kVArr, i = 0) => {
+  if ( i === kVArr.length ) {
+    return;
+  }
+  cb(kVArr[i][0], kVArr[i][1]);
+  return forEachRec(cb, kVArr, i + 1);
 };
 
 module.exports = {
