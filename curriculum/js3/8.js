@@ -16,8 +16,16 @@
  * @returns {boolean}
 */
 
-const solution = (a)=>{
-  return true;
+const solution = (node, mapObj = new Map()) => {
+  if (!node ) {
+    return false;
+  }
+  if ( mapObj.get(node) ) {
+    return true;
+  } else {
+    mapObj.set(node, true);
+  }
+  return solution(node.next, mapObj);
 };
 
 module.exports = {
