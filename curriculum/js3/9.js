@@ -14,8 +14,15 @@
 */
 
 // Hint: BFS or DFS from the teaching doc
-const solution = (a)=>{
-  return a;
+const solution = (node, num, c=[]) => {
+  if ( !node ) {
+    return;
+  }
+  if ( node.v === num ) {
+    return node;
+  }
+  c = c.concat(node.children || []);
+  return solution(c.shift(), num, c);
 };
 
 module.exports = {
