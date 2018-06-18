@@ -7,12 +7,12 @@
  */
 
 const solution = () => {
-  Array.prototype.gsForEach = function ( cb, i = 0 ) {
+  Array.prototype.gsForEach = function(cb, i = 0) {
     if ( i === this.length ) {
       return;
     }
     cb( this[i], i, this );
-    return this.gsForEach( cb, i+1 );
+    return this.gsForEach(cb, i + 1);
   };
 };
 
